@@ -45,7 +45,7 @@ a {
   text-decoration: none; /* No underlining */
 }
 a:visited { /* visited link */
-  color: ##21578d;
+  color: #21578d;
 }
 a:hover,
 a:focus {
@@ -90,4 +90,10 @@ a:active { /* selected link */
 .button.resume:active {
   background-color: #17324d;
   color: #ffffff;
+}
+header {
+  background-color: #a1d1dd;
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 3px solid #4a4a4a;
 }
