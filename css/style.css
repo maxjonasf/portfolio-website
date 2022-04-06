@@ -39,6 +39,8 @@ h2 {
 h3 {
   font-size: 1.75em;
   font-weight: 700;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 }
 
 h4 {
@@ -55,9 +57,11 @@ a {
   text-decoration: none;
   /* No underlining */
 }
+
 a:visited {
   color: #17324d;
 }
+
 a:hover,
 a:focus {
   color: #235e98;
@@ -72,12 +76,12 @@ a:active {
 .button {
   display: inline-block;
   background-color: #17324d;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 400;
   padding: 10px;
   border-radius: 2px;
-  transition: 0.2s opacity;
   margin-bottom: 20px;
+  transition: 0.2s opacity, 0.4s background-color, 0.4s color;
 }
 
 .button:hover,
@@ -89,7 +93,7 @@ a:active {
 
 .button.contact {
   background-color: transparent;
-  color: #17324d;
+  color: #17324d !important;
   text-transform: uppercase;
   border: 2px solid #17324d;
 }
@@ -97,26 +101,25 @@ a:active {
 .button.contact:hover,
 .button.contact:active {
   background-color: #17324d;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .button.resume {
   background-color: transparent;
-  color: #17324d;
+  color: #17324d !important;
   border: 2px solid #17324d;
 }
 
 .button.resume:hover,
 .button.resume:active {
   background-color: #17324d;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .smicons {
   width: 44px;
   margin: 0 8px;
   text-decoration: none;
-
 }
 
 /*Layout styling */
@@ -134,7 +137,7 @@ a:active {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 header {
@@ -182,12 +185,83 @@ nav>ul>li>a:visited, nav>ul>li>a:active, nav>ul>li>a:hover {
 }
 
 #hero span {
-display:block;
-font-size: 70%;
-font-weight: 400;
-margin-top: 1em
+  display: block;
+  font-size: 70%;
+  font-weight: 400;
+  margin-top: 1em
 }
 
 main {
-  padding-top: 159px;
+  padding-top: 128px;
 }
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+.contact {
+  display: inline-block;
+}
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  main {
+    padding-top: 75px;
+    font-size: 18px;
+  }
+
+  #hero {
+    text-align: center;
+  }
+  #hero span {
+    display: block;
+  }
+
+  .col-md-6 {
+  width: 50%;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+
+  /* ==============================
+Large devices (1024px or larger)
+================================= */
+  @media only screen and (min-width: 1024px) {
+    .col-lg-5 {
+    width: 41.66%;
+    }
+
+    .col-lg-7 {
+    width: 58.33%;
+    }
+  }
+
+  /* ==============================
+X-large devices (1440px or larger)
+================================= */
+  @media only screen and (min-width: 1440px) {
+    .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  }
