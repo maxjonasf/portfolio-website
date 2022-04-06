@@ -55,7 +55,9 @@ a {
   text-decoration: none;
   /* No underlining */
 }
-
+a:visited {
+  color: #17324d;
+}
 a:hover,
 a:focus {
   color: #235e98;
@@ -111,7 +113,10 @@ a:active {
 }
 
 .smicons {
-  width: 30px;
+  width: 44px;
+  margin: 0 8px;
+  text-decoration: none;
+
 }
 
 /*Layout styling */
@@ -164,7 +169,7 @@ nav>ul>li>a {
   color: #4a4a4a;
 }
 
-nav>ul>li>a:visited, a:active, a:hover {
+nav>ul>li>a:visited, nav>ul>li>a:active, nav>ul>li>a:hover {
   color: #4a4a4a;
   text-decoration: none;
 }
@@ -176,9 +181,13 @@ nav>ul>li>a:visited, a:active, a:hover {
   width: 100%;
 }
 
-main {
-  padding-top: 145px;
+#hero span {
+display:block;
+font-size: 70%;
+font-weight: 400;
+margin-top: 1em
 }
-#about, #workcontent {
-    padding-top: 12px;
+
+main {
+  padding-top: 159px;
 }
