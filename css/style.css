@@ -11,9 +11,9 @@ Background Color (Off White): #f0f0f0;
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: #fff;
   font-family: 'Work Sans', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   /* Sets the font size to 16px */
   font-weight: 300;
   /* Sets the font weight to 300 */
@@ -120,6 +120,12 @@ a:active {
   width: 44px;
   margin: 0 8px;
   text-decoration: none;
+  transition: 0.4s fill;
+}
+
+.smicons:hover,
+.smicons:focus {
+  fill: #e87356;
 }
 
 /*Layout styling */
@@ -203,10 +209,6 @@ main {
 [class*="col-"] {
   float: left;
   padding: 10px;
-}
-
-.contact {
-
 }
 
 .berlin-illustration {
