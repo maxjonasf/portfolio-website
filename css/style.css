@@ -9,9 +9,11 @@ Background Color (Off White): #f0f0f0;
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #fff;
   font-family: 'Work Sans', sans-serif;
@@ -54,7 +56,6 @@ h4 {
 img {
   width: 100%;
 }
-
 
 a {
   color: #17324d;
@@ -119,11 +120,13 @@ a:active {
   background-color: #17324d;
   color: #ffffff !important;
 }
+
 #contact {
   background-color: #f0f0f0;
   padding: 30px 0 30px 0;
   margin: 15px 0 0 0
 }
+
 .smicons {
   width: 44px;
   margin: 0 8px;
@@ -145,6 +148,7 @@ a:active {
   margin: 25px 0;
   /* row margin */
 }
+
 .row::after {
   content: "";
   clear: both;
@@ -157,12 +161,12 @@ a:active {
 
 .logo {
   max-width: 150px;
+  margin: 10px;
 }
 
 header {
   background-color: #a1d1dd;
-  text-align: center;
-  padding: 15px 0 0 0;
+  padding: 15px 0 10px 0;
   position: fixed;
   width: 100%;
   -webkit-box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.44);
@@ -170,34 +174,58 @@ header {
   box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.44);
 }
 
-nav {
-  display: inline-block;
-  width: 100%;
-}
-
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav>ul>li>a {
   padding: 0 15px;
   text-transform: uppercase;
+  color: #17324d;
   font-weight: 700;
-  color: #4a4a4a;
 }
 
 nav>ul>li>a:visited, nav>ul>li>a:active, nav>ul>li>a:hover {
-  color: #4a4a4a;
+  color: #17324d;
   text-decoration: none;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 19px;
+  padding-right: 0;
+  font-size: 20px;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid #17324d;
+  text-align: center;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
 }
 
 #hero {
   background-color: #a1d1dd;
+  color: #17324d;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
@@ -223,13 +251,14 @@ nav>ul>li>a:visited, nav>ul>li>a:active, nav>ul>li>a:hover {
 }
 
 main {
-  padding-top: 128px;
+  padding-top: 81px;
 }
 
 [class*="col-"] {
   float: left;
   padding: 10px;
 }
+
 .conclusion {
   margin: -70px 0 40px 0;
 }
@@ -282,7 +311,6 @@ main {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -295,6 +323,22 @@ Medium devices (640px and larger)
     width: auto;
     float: right;
     margin-top: 4px;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  nav>ul {
+    margin: 1em 0;
+  }
+
+  nav>ul>li {
+    display: inline-block;
   }
 
   main {
@@ -314,11 +358,10 @@ Medium devices (640px and larger)
   .col-md-6 {
     width: 50%;
   }
+
   .container {
     padding: 0 30px;
- }
-
-
+  }
 }
 
 /* ==============================
@@ -331,7 +374,7 @@ Large devices (1024px or larger)
 
   .col-lg-7 {
     width: 58.33%;
- }
+  }
 }
 
 /* ==============================
